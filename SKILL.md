@@ -11,31 +11,33 @@ Helps users design, write, and iteratively improve skills for Odysseus. Supports
 
 ## How This Skill Works
 
-When activated, follow this process:
+This skill helps you create or improve skills for Odysseus by following a simple and practical process. When you activate this skill, here’s what happens:
 
-1. **Understand the User’s Goal**  
-   Clarify what the user wants the skill to achieve and in what context.
+1. **Understand Your Goal**  
+   First, I clarify what you want the new skill to do and in what situations it should be used.
 
-2. **Decide Scope**  
-   Help the user choose between a Simple Skill or an Advanced Skill using the decision framework.
+2. **Decide the Scope**  
+   We decide together whether to create a **Simple Skill** (focused and lightweight) or an **Advanced Skill** (with memory and multi-step logic).
 
 3. **Gather Requirements**  
-   Collect information about triggers, tools needed, memory requirements, output format, and constraints.
+   I ask questions about triggers, tools needed, memory usage, output format, and any constraints.
 
 4. **Write the Skill**  
-   Create the skill using the recommended structure and Odysseus best practices.
+   I create the skill using a clean structure that works well in Odysseus, following best practices.
 
 5. **Define Test Cases**  
-   Create lightweight, realistic test cases together with the user.
+   We create a few realistic test cases to check if the skill works as expected.
 
-6. **Guide Testing Inside Odysseus**  
-   Instruct the user on how to practically test the skill using Agent mode.
+6. **Test Inside Odysseus**  
+   You test the skill manually using Agent mode. I guide you on how to do this effectively.
 
-7. **Iterate Based on Feedback**  
-   Improve the skill based on test results and user feedback.
+7. **Iterate and Improve**  
+   Based on the test results and your feedback, I improve the skill and we repeat the process until you're satisfied.
 
 8. **Optimize Triggering (Optional)**  
-   Help refine the skill description for better activation when needed.
+   If needed, I help you refine the skill description so it activates at the right time.
+
+This process is flexible. Depending on your needs, we can skip some steps. For example, if you already have a draft of the skill, we can directly move to testing and improvement. If you want quick help without formal testing, just let me know.
 
 ## Scope Decision Framework
 
@@ -53,34 +55,44 @@ When activated, follow this process:
 
 Always explain the difference and confirm the user’s choice before writing the skill.
 
-## Recommended Skill Structure for Odysseus
+## Recommended Guide for Writing Skills for Odysseus
 
-Use this structure when writing skills:
+When creating or improving skills for Odysseus, follow these guidelines:
 
-```markdown
-# Skill Name
+### Keep Skills Focused
+A skill should solve **one clear problem** or handle one specific type of task. Skills that try to do too many different things at once usually perform poorly and become difficult to maintain. It is better to create focused skills and combine them when needed.
 
-## Description
-Clear explanation of what the skill does and when it should trigger.
+### Write Clear and Direct Instructions
+Use simple, step-by-step instructions. Odysseus responds better when the logic is easy to follow. Avoid vague statements. Instead of saying “handle this carefully,” clearly explain what steps should be taken and why.
 
-## When to Use
-- Specific triggers and contexts
+### Use Memory Only When Necessary
+Only include memory usage if the skill genuinely needs to remember information across different conversations. Adding memory unnecessarily increases complexity and can reduce reliability. If the skill works well without memory, don’t force it.
 
-## How It Works
-Step-by-step logic the agent should follow.
+### Clearly Define Triggers
+In the **Description** and **When to Use** sections, clearly mention the situations, phrases, or contexts that should activate the skill. Good trigger descriptions help Odysseus understand when to use the skill automatically.
 
-## Tools / Capabilities
-- List of tools the skill can or should use
+### Follow a Consistent Structure
+Organize your skills using this basic structure:
 
-## Memory Usage (Advanced Skills Only)
-- What should be remembered and when
+- **Description** — What the skill does and when it should be used
+- **When to Use** — Specific triggers and contexts
+- **How It Works** — Step-by-step logic the agent should follow
+- **Tools / Capabilities** — What tools the skill can use
+- **Memory Usage** — Only include this if the skill needs memory
+- **Output Format** — What the final output should look like
+- **Examples** — Show sample inputs and expected behavior
 
-## Output Format
-- Expected structure or style of the final output
+### Start Simple, Then Improve
+It is better to create a simple working version of the skill first and improve it over time based on real usage, rather than trying to make it perfect in the first attempt.
 
-## Examples (Recommended)
-- Input → Expected behavior
-```
+### Test Skills Inside Odysseus
+After writing a skill, always test it manually using **Agent mode** with real tasks. This is the most effective way to find problems early and improve the skill.
+
+### Handle Tool Usage Carefully
+When using tools, consider what should happen if a tool fails or returns unexpected results. Adding basic error handling or fallback steps can make the skill more reliable.
+
+### Explain the Reasoning When Helpful
+When giving instructions, briefly explain *why* something should be done a certain way. This helps the agent make better decisions instead of just following rules blindly.
 
 ## Odysseus Best Practices
 
