@@ -1,3 +1,9 @@
+---
+name: Skill Creator
+description: Helps users design, write, and iteratively improve skills for Odysseus. Supports both simple and advanced skills.
+version: 1.0.0
+---
+
 # Skill Creator
 
 ## Description
