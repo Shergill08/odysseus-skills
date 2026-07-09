@@ -71,16 +71,33 @@ Only include memory usage if the skill genuinely needs to remember information a
 ### Clearly Define Triggers
 In the **Description** and **When to Use** sections, clearly mention the situations, phrases, or contexts that should activate the skill. Good trigger descriptions help Odysseus understand when to use the skill automatically.
 
-### Follow a Consistent Structure
+### Recommended Skill Structure
 Organize your skills using this basic structure:
 
-- **Description** — What the skill does and when it should be used
-- **When to Use** — Specific triggers and contexts
-- **How It Works** — Step-by-step logic the agent should follow
-- **Tools / Capabilities** — What tools the skill can use
-- **Memory Usage** — Only include this if the skill needs memory
-- **Output Format** — What the final output should look like
-- **Examples** — Show sample inputs and expected behavior
+```markdown
+# Skill Name
+
+## Description
+Clear explanation of what the skill does and when it should trigger.
+
+## When to Use
+- Specific triggers and contexts
+
+## How It Works
+Step-by-step logic the agent should follow.
+
+## Tools / Capabilities
+- List of tools the skill can or should use
+
+## Memory Usage (Advanced Skills Only)
+- What should be remembered and when
+
+## Output Format
+- Expected structure or style of the final output
+
+## Examples (Recommended)
+- Input → Expected behavior
+```
 
 ### Start Simple, Then Improve
 It is better to create a simple working version of the skill first and improve it over time based on real usage, rather than trying to make it perfect in the first attempt.
@@ -95,7 +112,6 @@ When using tools, consider what should happen if a tool fails or returns unexpec
 When giving instructions, briefly explain *why* something should be done a certain way. This helps the agent make better decisions instead of just following rules blindly.
 
 ## Odysseus Best Practices
-
 - Keep skills focused. Broad skills tend to perform poorly in Odysseus.
 - Use memory only when genuinely needed. Overusing memory increases complexity and reduces reliability.
 - Be explicit with steps. Odysseus responds better to clear instructions than vague guidance.
@@ -104,7 +120,6 @@ When giving instructions, briefly explain *why* something should be done a certa
 - Prefer quality and clarity over adding too many features at once.
 
 ## Common Pitfalls to Avoid
-
 - Making the skill too vague or trying to handle too many different cases at once
 - Adding memory to skills that do not actually need long-term context
 - Writing long, unstructured skills without clear sections
@@ -113,7 +128,6 @@ When giving instructions, briefly explain *why* something should be done a certa
 - Overcomplicating the skill early instead of starting simple and iterating
 
 ## Memory Usage Guidance (Advanced Skills Only)
-
 When designing advanced skills that use memory:
 - Clearly define what information should be stored and under what conditions.
 - Specify when the skill should read from memory and when it should update it.
@@ -121,7 +135,6 @@ When designing advanced skills that use memory:
 - Only use memory if continuity across conversations provides real value.
 
 ## Testing Approach
-
 Because heavy automated evaluation is limited in Odysseus, use this practical approach:
 
 1. Define 3–5 realistic test cases that represent how the skill will actually be used.
@@ -133,7 +146,6 @@ Because heavy automated evaluation is limited in Odysseus, use this practical ap
 Focus on real-world reliability and usefulness rather than complex benchmarks.
 
 ## Iteration Process
-
 After testing:
 - Discuss results with the user and collect specific feedback.
 - Identify the most important issues.
@@ -142,7 +154,6 @@ After testing:
 - Repeat until the user is satisfied with the skill’s performance.
 
 ## Output Requirements
-
 When creating or improving a skill, always:
 - Use clear and well-structured formatting
 - Distinguish between Simple and Advanced approaches when relevant
