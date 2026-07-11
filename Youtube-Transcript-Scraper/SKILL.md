@@ -1,5 +1,5 @@
 ---
-name: youtube-transcript-description
+name: Youtube-Transcript-Scraper
 description: Extract a YouTube video description and timestamped transcript via Apify. Auto-selects cheapest working actor (johnvc/YoutubeTranscripts first, fallback to starvibe/youtube-video-transcript). Trigger when user shares a YouTube URL and wants description, transcript, captions, or subtitles with timestamps.
 metadata:
   version: "1.3.0"
